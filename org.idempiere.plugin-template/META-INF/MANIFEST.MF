@@ -1,0 +1,20 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: iDempiere Plugin Template
+Bundle-SymbolicName: org.idempiere.plugin-template;singleton:=true
+Bundle-Version: 1.0.0
+Bundle-Vendor: Saúl Piña <sauljabin@gmail.com>
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.adempiere.base;bundle-version="2.1.0",
+ org.adempiere.plugin.utils;bundle-version="2.1.0",
+ org.adempiere.ui;bundle-version="2.1.0",
+ org.zkoss.zk.library;bundle-version="6.0.0",
+ org.adempiere.ui.zk;bundle-version="2.1.0"
+Import-Package: org.osgi.service.event;version="1.3.0"
+Service-Component: OSGI-INF/org.idempiere.component.ModelFactory.xml,
+ OSGI-INF/org.idempiere.component.EventManager.xml,
+ OSGI-INF/org.idempiere.component.CalloutFactory.xml,
+ OSGI-INF/org.idempiere.component.ProcessFactory.xml,
+ OSGI-INF/org.idempiere.component.FormFactory.xml
+Bundle-Activator: org.adempiere.plugin.utils.Incremental2PackActivator
