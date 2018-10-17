@@ -1,21 +1,16 @@
 org.idempiere.plugin-template
 =============================
 
-Description
+Descrição
 -----------
-This project is a example template for iDempiere plugins. It's a standard structure.
-It contains examples about the most frequently used elements (5) Callout, Forms, Models, Processes, Events.
+Este projeto é um template que pode ser utilizado como exemplo na criação de plugins para o iDempiere. É uma estrutura padrão e contém exemplos dos elementos que geralmente são os mais utilizados durante o processo de desenvolvimento: Callout, Forms, Modelos, Processos e Eventos.
 
-
-Features
+Funcionalidades
 --------
-- Copyright: 2016 Saúl Piña <sauljabin@gmail.com>
-- Repository: https://github.com/sauljabin/idempiere-plugin-template
-- License: GPL 2
-- Version: v1.0.0
-- Folder estructure
+- Versão: v1.0.0
+- Estrutura de Pastas
 ```
-      org.idempiere.{plugin name}
+      org.idempiere.{nome do plugin}
         |_.settings
         |_.classpath
         |_.project
@@ -61,44 +56,44 @@ Features
 ```
 
 
-Standard New Plugin
+Novo Plugin Padrão
 -------------------
-- New callout
-    * Name: C{callout name}
-    * Package: `org.idempiere.callout`
-    * Example: `org.idempiere.callout.CStringFormat`
+- Nova Callout
+    * Nome: C{da callout}
+    * Pacote: `org.idempiere.callout`
+    * Exemplo: `org.idempiere.callout.CStringFormat`
 
 
-- New process
-    * Name: P{process name}
-    * Package: `org.idempiere.process`
-    * Example: `org.idempiere.process.PGenerateWithholding`
+- Novo processo
+    * Nome: P{nome do processo}
+    * Pacote: `org.idempiere.process`
+    * Exemplo: `org.idempiere.process.PGenerateWithholding`
 
 
-- New form
-    * Name: F{form name}
-    * Package: `org.idempiere.form`
-    * Example: `org.idempiere.form.FMultiPayment`
+- Novo form
+    * Nome: F{nome do form}
+    * Pacote: `org.idempiere.form`
+    * Exemplo: `org.idempiere.form.FMultiPayment`
 
 
-- New event
-    * Name: E{event name}
-    * Package: `org.idempiere.event`
-    * Example: `org.idempiere.event.EAfterCompleteInvoice`
+- Novo evento
+    * Nome: E{nome do evento}
+    * Pacote: `org.idempiere.event`
+    * Exemplo: `org.idempiere.event.EAfterCompleteInvoice`
 
 
-- New model (extends class X)
-    * Name: M{table name without prefix}.
-    * Package: `org.idempiere.model`
-    * Example: `org.idempiere.model.X_TL_TableExample -> org.idempiere.model.MTableExample`
+- Novo modelo (extende a class X)
+    * Nome: M{table name without prefix}.
+    * Pacote: `org.idempiere.model`
+    * Exemplo: `org.idempiere.model.X_TL_TableExample -> org.idempiere.model.MTableExample`
 
 
-Documentation
+Documentação
 -------------
-- New callout
-    * Create callout in package `org.idempiere.callout`, extends from `CustomCallout`
-    * Add license header
-    * Register callout in `org.idempiere.component.CalloutFactory`. Example:
+- Nova callout
+    * Crie uma callout no pacote `org.idempiere.callout`, que extende a classe `CustomCallout`
+    * Adicione o cabeçalho padrão
+    * Regristre a callout na classe `org.idempiere.component.CalloutFactory`. Exemplo:
     ```java
         protected void initialize() {
             registerCallout(MTableExample.Table_Name, MTableExample.COLUMNNAME_Text, CPrintPluginInfo.class);
@@ -106,7 +101,7 @@ Documentation
     ```
 
 
-- New process
+- Novo Processo
     * Create process in package `org.idempiere.process`, extends from `CustomProcess`
     * Add license header
     * Register process in `org.idempiere.component.ProcessFactory`. Example:
