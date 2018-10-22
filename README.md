@@ -102,9 +102,9 @@ Documentação
 
 
 - Novo Processo
-    * Create process in package `org.idempiere.process`, extends from `CustomProcess`
-    * Add license header
-    * Register process in `org.idempiere.component.ProcessFactory`. Example:
+    * Crie uma callout no pacote `org.idempiere.process`, que extende a classe `CustomProcess`
+    * Adicione o cabeçalho padrão
+    * Registre o processo na classe `org.idempiere.component.ProcessFactory`. Exemplo:
     ```java
         protected void initialize() {
             registerProcess(PPrintPluginInfo.class);
@@ -112,10 +112,10 @@ Documentação
     ```
 
 
-- New form
-    * Create form in package `org.idempiere.form`, extends from `CustomFormController`
-    * Add license header
-    * Register form in `org.idempiere.component.FormFactory`. Example:
+- Novo Formulário
+    * Criar um formulário no pacote `org.idempiere.form`, que extende a classe `CustomFormController`
+    * Adicione o cabeçalho padrão
+    * Registre o processo na classe `org.idempiere.component.FormFactory`. Exemplo:
     ```java
         protected void initialize() {
             registerForm(FPrintPluginInfo.class);
@@ -123,10 +123,10 @@ Documentação
     ```
 
 
-- New event
-    * Create event in package `org.idempiere.event`, extends from `CustomEventHandler`
-    * Add license header
-    * Register event in `org.idempiere.component.EventManager`. Example:
+- Novo Evento
+    * Crie um evento no pacote `org.idempiere.event`, que extende a classe `CustomEventHandler`
+    * Adicione o cabeçalho padrão
+    * Registre o evento na classe `org.idempiere.component.EventManager`. Exemplo:
     ```java
         protected void initialize() {
             registerTableEvent(IEventTopics.DOC_BEFORE_COMPLETE, MTableExample.Table_Name, EPrintPluginInfo.class);
@@ -134,10 +134,10 @@ Documentação
     ```
 
 
-- New model (extends form class X)
-    * Create model in package `org.idempiere.model`, extends class `X`. Example: `org.idempiere.model.X_TL_TableExample -> org.idempiere.model.MTableExample`
-    * Add license header
-    * Register model in `org.idempiere.component.ModelFactory`. Example:
+- Novo modelo (extendendo a classe X)
+    * Crie a classe de modelo no pacote `org.idempiere.model`, que extende a classe `X`. Exemplo: `org.idempiere.model.X_TL_TableExample -> org.idempiere.model.MTableExample`
+  * Adicione o cabeçalho padrão
+  * Registre o modelo na classe `org.idempiere.component.ModelFactory`. Exemplo:
     ```java
         protected void initialize() {
             registerTableModel(MTableExample.Table_Name, MTableExample.class);
